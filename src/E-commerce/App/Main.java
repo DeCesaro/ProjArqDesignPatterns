@@ -6,7 +6,7 @@ import structural.FacadeUser;
 public class Main {
     public static void main(String[] args) {
         FacadeUser facade = new FacadeUser();
-        facade.addCarrinhoObserver(Cart.getInstance());
+        facade.addCartObserver(Cart.getInstance());
         facade.UI();
     }
 }

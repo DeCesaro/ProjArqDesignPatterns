@@ -13,7 +13,7 @@ public class FacadeUser {
     private Cart cart;
     private List<CartProductObserver> observers = new ArrayList<CartProductObserver>();
 
-    public void addCarrinhoObserver(CartProductObserver observer) {
+    public void addCartObserver(CartProductObserver observer) {
         this.observers.add(observer);
     }
 
@@ -21,7 +21,7 @@ public class FacadeUser {
 
         createCarrinho();
 
-        System.out.println("BEM-VINDO AO BACELO E-SHOP");
+        System.out.println("BEM-VINDO A BACELO E-SHOP");
         System.out.println("========================");
         System.out.println("1- Adicionar produto no carrinho");
         System.out.println("2- Visualizar Carrinho");
