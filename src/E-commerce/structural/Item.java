@@ -1,12 +1,12 @@
-package creational;
+package structural;
 
 public class Item {
 
     private String name;
 
-    private Double value;
+    private double value;
 
-    public Item( String name, Double value) {
+    public Item( String name, double value) {
         this.name = name;
         this.value = value;
     }
@@ -19,12 +19,17 @@ public class Item {
         this.name = name;
     }
 
-    public Double getValue() {
+    public double getValue() {
         return value;
     }
 
-    public void setValue(Double value) {
+    public void setValue(double value) {
         this.value = value;
+    }
+
+    @Override
+    public String toString() {
+        return name + " -  R$" + value;
     }
 
 }

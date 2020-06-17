@@ -1,9 +1,6 @@
 package creational;
 
-import behavioral.strategy.BoletoPayment;
-import behavioral.strategy.CreditCardPayment;
-import behavioral.strategy.DebitCardPayment;
-import behavioral.strategy.PayPal;
+import behavioral.strategy.*;
 
 import java.util.Scanner;
 
@@ -23,23 +20,23 @@ public class BuyOptionsFactory {
         switch (input) {
             case 1:
                 CreditCardPayment p1 = new CreditCardPayment();
+                p1.Paymentdetail();
                 p1.pay(value);
-                System.out.println("Muito Obrigado por utilizar nossos servicos!\nVolte sempre!!!");
                 break;
             case 2:
                 DebitCardPayment p2 = new DebitCardPayment();
+                p2.Paymentdetail();
                 p2.pay(value);
-                System.out.println("Muito Obrigado por utilizar nossos servicos!\nVolte sempre!!!");
                 break;
             case 3:
                 BoletoPayment p3 = new BoletoPayment();
+                p3.Paymentdetail();
                 p3.pay(value);
-                System.out.println("Muito Obrigado por utilizar nossos servicos!\nVolte sempre!!!");
                 break;
             case 4:
                 PayPal p4 = new PayPal();
+                p4.Paymentdetail();
                 p4.pay(value);
-                System.out.println("Muito Obrigado por utilizar nossos servicos!\nVolte sempre!!!");
                 break;
             default:
                 System.out.println("Numero invalido, digite novamente.");

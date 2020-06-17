@@ -1,12 +1,12 @@
-package creational;
+package App;
+
+import creational.Cart;
+import structural.FacadeUser;
 
 public class Main {
     public static void main(String[] args) {
-        FacadeMain fachada = new FacadeMain();
-
-        fachada.addCarrinhoObserver((CartProductObserver) Cart.getInstance());
-
-        fachada.UI();
-
+        FacadeUser facade = new FacadeUser();
+        facade.addCarrinhoObserver(Cart.getInstance());
+        facade.UI();
     }
 }

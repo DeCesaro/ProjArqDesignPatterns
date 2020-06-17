@@ -1,15 +1,15 @@
 package structural;
 
+import behavioral.observer.CartProductObserver;
 import creational.AddProduct;
 import creational.BuyOptionsFactory;
 import creational.Cart;
-import behavioral.observer.CartProductObserver;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class FacadeMain {
+public class FacadeUser {
     private Cart cart;
     private List<CartProductObserver> observers = new ArrayList<CartProductObserver>();
 
@@ -20,6 +20,7 @@ public class FacadeMain {
     public void UI() {
 
         createCarrinho();
+
         System.out.println("BEM-VINDO AO BACELO E-SHOP");
         System.out.println("========================");
         System.out.println("1- Adicionar produto no carrinho");
@@ -55,6 +56,7 @@ public class FacadeMain {
         fac.value = cart.getTotalValue();
         fac.pay();
 
+
     }
 
 
@@ -78,7 +80,7 @@ public class FacadeMain {
 
         System.out.println("Digite o preço:");
 
-        double preco = sc.nextInt();
+        int preco = sc.nextInt();
 
         Item p = new Item(nome, preco);
         AddProduct event = new AddProduct(p);

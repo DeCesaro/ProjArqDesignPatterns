@@ -1,6 +1,7 @@
-package creational;
+package behavioral.strategy;
 
 public interface PaymentMethod {
-    public void detalhesPagamento();
-    public void pay(double payment);
+    void Paymentdetail();
+
+    void pay(double payment);
 }

@@ -1,4 +1,4 @@
-package creational;
+package behavioral.strategy;
 
 public interface OperationsPayment {
 

@@ -1,4 +1,4 @@
-package creational;
+package behavioral.strategy;
 
 import java.util.Scanner;
 
@@ -6,7 +6,7 @@ public class CreditCardPayment implements PaymentMethod {
     Scanner sc = new Scanner(System.in);
 
     @Override
-    public void detalhesPagamento() {
+    public void Paymentdetail() {
         System.out.println("Digite o número do cartão: ");
         sc.nextLine();
         System.out.println("Digite a data de expiração do cartão:");
@@ -18,7 +18,7 @@ public class CreditCardPayment implements PaymentMethod {
     @Override
     public void pay(double payment) {
 
-        System.out.println("Valor de  R$ " + payment + " sendo realizado");
+        System.out.println("Valor de  R$ " + payment + " a ser pago");
         System.out.println("Pagamento realizado com sucesso!");
     }
 

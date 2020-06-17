@@ -40,7 +40,6 @@ public class Cart implements CartProductObserver {
     }
 
     public void listProduct() {
-            System.out.println("Produtos no carrinho: ");
             for (Item p : cart)
                 System.out.println(" - " + p.getName());
         }
@@ -56,13 +55,13 @@ public class Cart implements CartProductObserver {
         @Override
         public void call(AddProduct event) {
             addProd(event.getAddProduct());
-            System.out.println("Produto adicionado com sucesso!");
-            System.out.println("=================================");
+            System.out.println("Produto adicionado!");
+            System.out.println("=========================");
         }
 
     public String toString() {
-        String toString = "Preco total atual:\nR$ " + getTotalValue();
-        toString += "\nItens do carrinho:\n" + printProduct();
+        String toString = "Preco do carrinho:\nR$ " + getTotalValue();
+        toString += "\nItens no carrinho:\n" + printProduct();
         return toString;
     }
 
